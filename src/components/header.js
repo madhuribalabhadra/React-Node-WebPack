@@ -28,7 +28,7 @@ const Header = props => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/About" className="nav-link">
+              <Link to="/" className="nav-link">
                 About
               </Link>
             </li>
@@ -39,8 +39,7 @@ const Header = props => {
             </li>
             <li className="nav-item">
               <button type="button" className="btn btn-primary">
-                Cart{" "}
-                <span className="badge badge-light">{props.data.cart}</span>
+                Cart <span className="badge badge-light">{0}</span>
               </button>
             </li>
           </ul>

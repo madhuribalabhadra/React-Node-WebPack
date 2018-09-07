@@ -4,9 +4,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var cors = require("cors");
-var Sample = require("./routes/Sample");
-var Insert = require("./routes/Insert");
-var Login = require("./routes/login");
+
 const app = express();
 
 app.use(cors());
@@ -30,10 +28,6 @@ app.use(function(req, res, next) {
   );
   next();
 });
-
-// app.use("/my", Sample);
-app.use("/login", Login);
-app.use("/insert", Insert);
 
 app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname + "/public", "", "index.html"));
